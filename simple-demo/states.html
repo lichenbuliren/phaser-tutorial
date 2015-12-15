@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>An Example of a State</title>
+    <script src="../lib/phaser.js"></script>
+    <script src="../public/js/StateA.js"></script>
+    <script src="../public/js/StateB.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+var game = new Phaser.Game(800,600,Phaser.AUTO,'container');
+game.state.add('StateA',MyGame.StateA);
+game.state.add('StateB',MyGame.StateB);
+game.state.start('StateA');
+</script>
+</html>

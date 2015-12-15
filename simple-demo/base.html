@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base Demo</title>
+    <script src="../lib/phaser.js"></script>
+</head>
+<body>
+</body>
+<script>
+    var game = new Phaser.Game(800,600,Phaser.AUTO,'',{preload: preload,create: create});
+    var scaleManager = new Phaser.ScaleManager(game,'100%','100%');
+
+    function preload(){
+        game.load.image('dude','../public/images/dude.png');
+    }
+
+    function create(){
+        var image = game.add.sprite(game.world.centerX,game.world.centerY,'dude');
+        image.anchor.set(0.5);
+        image.inputEnabled = true;
+
+    }
+</script>
+</html>
